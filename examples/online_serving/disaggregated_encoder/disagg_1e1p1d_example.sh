@@ -8,6 +8,8 @@ declare -a PIDS=()
 ###############################################################################
 MODEL="${MODEL:-Qwen/Qwen2.5-VL-3B-Instruct}"
 LOG_PATH="${LOG_PATH:-/workspace/logs}"
+# Clear previous logs to avoid confusion
+rm -rf $LOG_PATH
 mkdir -p $LOG_PATH
 
 ENCODE_PORT="${ENCODE_PORT:-19534}"
