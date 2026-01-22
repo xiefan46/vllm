@@ -28,6 +28,20 @@ export UCX_TLS=all
 export UCX_NET_DEVICES=all
 
 ###############################################################################
+# Print configuration paths for debugging
+###############################################################################
+echo "========== Configuration =========="
+echo "MODEL: $MODEL"
+echo "LOG_PATH: $LOG_PATH"
+echo "EC_SHARED_STORAGE_PATH: $EC_SHARED_STORAGE_PATH"
+echo "ENCODE_PORT: $ENCODE_PORT"
+echo "PREFILL_PORT: $PREFILL_PORT"
+echo "DECODE_PORT: $DECODE_PORT"
+echo "PROXY_PORT: $PROXY_PORT"
+echo "GPU_E: $GPU_E, GPU_P: $GPU_P, GPU_D: $GPU_D"
+echo "==================================="
+
+###############################################################################
 # Helpers
 ###############################################################################
 # Find the git repository root directory
@@ -38,6 +52,13 @@ ENC_LOG=$LOG_PATH/encoder_${START_TIME}.log
 P_LOG=$LOG_PATH/p_${START_TIME}.log
 D_LOG=$LOG_PATH/d_${START_TIME}.log
 PROXY_LOG=$LOG_PATH/proxy_${START_TIME}.log
+
+echo "GIT_ROOT: $GIT_ROOT"
+echo "ENC_LOG: $ENC_LOG"
+echo "P_LOG: $P_LOG"
+echo "D_LOG: $D_LOG"
+echo "PROXY_LOG: $PROXY_LOG"
+echo "==================================="
 
 wait_for_server() {
     local port=$1
