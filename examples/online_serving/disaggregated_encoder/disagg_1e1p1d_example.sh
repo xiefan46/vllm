@@ -7,7 +7,7 @@ declare -a PIDS=()
 # Configuration -- override via env before running
 ###############################################################################
 MODEL="${MODEL:-Qwen/Qwen2.5-VL-3B-Instruct}"
-LOG_PATH="${LOG_PATH:-./logs}"
+LOG_PATH="${LOG_PATH:-/workspace/logs}"
 mkdir -p $LOG_PATH
 
 ENCODE_PORT="${ENCODE_PORT:-19534}"
@@ -19,7 +19,7 @@ GPU_E="${GPU_E:-2}"
 GPU_P="${GPU_P:-2}"
 GPU_D="${GPU_D:-3}"
 
-EC_SHARED_STORAGE_PATH="${EC_SHARED_STORAGE_PATH:-/tmp/ec_cache}"
+EC_SHARED_STORAGE_PATH="${EC_SHARED_STORAGE_PATH:-/workspace/ec_cache}"
 TIMEOUT_SECONDS="${TIMEOUT_SECONDS:-12000}"   # wait_for_server timeout
 
 NUM_PROMPTS="${NUM_PROMPTS:-100}"    # number of prompts to send in benchmark
